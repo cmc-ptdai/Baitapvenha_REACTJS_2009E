@@ -62,7 +62,6 @@ const countEvenNumber = () => {
 }
 
 //Bài 6 : Hàm nhận vào 1 mảng chứa các chữ cái bị trùng lặp ngẫu nhiên Tính toán và trả về 1 mảng đã xóa đi các chữ cái bị trùng lặp
-
 const paramsLetter = ['A', 'C', 'A', 'A', 'B', 'D','B']
 const deleteLetter = () => {
   for(let i = 0 ; i < paramsLetter.length ; i ++) {
@@ -107,7 +106,6 @@ const createObject = () => {
 }
 
 //Bìa 8 : Cho array dưới đây là danh sách các students
-
 const students = [
   { id: 1, name: 'Nguyễn Thị Tèo', score: 9.2 },
   { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 },
