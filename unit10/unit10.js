@@ -1,78 +1,64 @@
 //Bai : 1  in một bảng của một số bất kì với các số từ 1 đến 10 và hiển thị ra kết quả 
-const tableMultiplication = (number) => {
-  if(number >= 1 && number <= 10) {
-    console.log('In bảng nhân:');
-    for(let i = 1 ; i <= 10 ; i ++){
-      console.log(number + ' x ' + i + ' = ' + number * i);
-    }
-  }else {
-    console.log('mời bạn nhập lại môt số trong khoảng từ 1 đến 10');
+const tableMultiplication = number => {
+  if (number < 1 || number > 10) return;
+  console.log('In bảng nhân:');
+  for (let i = 1; i <= 10; i++) {
+    console.log(number + ' x ' + i + ' = ' + number * i);
   }
 }
 
 // Bài 2 : hàm nhận tham số là n (số nguyên dương), 1 <= n <= 30 in các số chẵn từ 1 đến n 
-const InEvenNumber = (number) => {
-  if(number >= 1 && number <= 30) {
-    for(let i = 1 ; i <= number ; i ++){
-      if(i % 2 == 0 ){
-        console.log(i);
-      }
+const getEvenNumber = number => {
+  if (number < 1 || number > 30) return;
+  for (let i = 1; i <= number; i++) {
+    if (i % 2 === 0 ) {
+      console.log(i);
     }
-  }else {
-    console.log('mời bạn nhập lại môt số trong khoảng từ 1 đến 30');
   }
 }
 
 //Bài 3 : Hàm nhận tham số là n (số nguyên dương), 1 <= n <= 30 Tính tổng từ 1 đến n
-const sum = (number) => {
-  if(number >= 1 && number <= 30) {
-    let sum = 0 ; 
-    for(let i = 1 ; i <= number ; i ++){
-      sum = sum + i
-    }
-    console.log('tổng các số từ 1 đến ' + number + ' là : ' + sum)
-  }else {
-    console.log('mời bạn nhập lại môt số trong khoảng từ 1 đến 30');
+const countNumber = number => {
+  if (number < 1 || number > 30) return;
+  let sum = 0 ; 
+  for (let i = 1; i <= number; i++) {
+    sum += i
   }
+  console.log(`tổng các số từ 1 đến ${number} là : ${sum}`)
 }
 
 //Bài 4 : Hàm nhận vào tham số n (số nguyên dương), 1 <= n <= 30 in n! (gia thừa của n)
-const factorial = (number) => {
-  if(number >= 1 && number <= 30) {
-    let factorial = 1 ; 
-    for(let i = 1 ; i <= number ; i ++){
-      factorial = factorial * i
+const getFactorial = number => {
+  if (number < 1 || number > 30) return;
+    let factorial = 1 ;
+    for (let i = 1; i <= number; i++) {
+      factorial *= i
     }
-    console.log('kết quả của ' + number + '! là : ' + factorial)
-  }else {
-    console.log('mời bạn nhập lại môt số trong khoảng từ 1 đến 30');
-  }
+    console.log(`kết quả của ${number}! là : ${factorial}`)
 }
 
 //Bài 5 : Hàm nhận vào 1 mảng đếm xem trong mảng có bao nhiêu số chẵn
-const paramNumber = [1,2,3,4,5,6,7,8,9,10,2,4,5,8,6]
-const countEvenNumber = () => {
+const countEvenNumber = array => {
+
   let countNumber = 0
-    paramNumber.forEach(function(value,index){
-    if(value % 2 == 0) {
-      countNumber = countNumber +1
+  array.forEach( value => {
+    if (value % 2 === 0) {
+      countNumber += 1
     }
   })
-  console.log('mảng có ' + countNumber + ' số chẵn');
+  return countNumber;
 }
 
 //Bài 6 : Hàm nhận vào 1 mảng chứa các chữ cái bị trùng lặp ngẫu nhiên Tính toán và trả về 1 mảng đã xóa đi các chữ cái bị trùng lặp
 
-const paramsLetter = ['A', 'C', 'A', 'A', 'B', 'D','B']
-const deleteLetter = () => {
-  for(let i = 0 ; i < paramsLetter.length ; i ++) {
-    for(let j = i ; j < paramsLetter.length - 1 ; j++) {
-      if(paramsLetter[i] === paramsLetter[j]) {
-        paramsLetter.splice(j,1);
-      }
+const getUniqArray = array => {
+  const uniqArr = [] 
+  for (let i = 0; i < array.length; i++) {
+    if (uniqArr.indexOf(array[i]) === -1) {
+      uniqArr.push(array[i])
     }
   }
-  console.log(paramsLetter)
+  return uniqArr;
 }
 
 //Bài 7 : Bạn cần phải tạo ra 1 object có đầy đủ các thuộc tính: name, score từ 2 array sau:
@@ -95,15 +81,15 @@ const studentScores = [
   { id: 7, score: 6.1 }
 ]
 
-const createObject = () => {
-  for(let i = 0 ; i < studentNames.length ; i++ ) {
-    for(let j = 0 ; j < studentScores.length ; j ++) {
-      if(studentNames[i].id == studentScores[j].id){
-        studentNames[i].score  = studentScores[j].score
+const createObject = (array1, array2) => {
+  for(let i = 0 ; i < array1.length ; i++ ) {
+    for(let j = 0 ; j < array2.length ; j ++) {
+      if(array1[i].id === array2[j].id){
+        array1[i].score = array2[j].score
       }
     }
   }
-  console.log(studentNames);
+  return array1;
 }
 
 //Bìa 8 : Cho array dưới đây là danh sách các students
@@ -119,27 +105,31 @@ const students = [
 ]
 //Hãy tìm sinh viên có điểm (score) thấp nhất và sinh viên có score cao nhất
 
-const scoreMaxMin = () => {
+const scoreMaxMin = array => {
   let scoreMax = 0 
-  let scoreMin = 12
-  let theBest = []
-  let theBad = []
-  for(let i = 0 ; i < students.length ; i++ ) {
-    if(students[i].score > scoreMax) {
-      scoreMax = students[i].score
+  let scoreMin = 11
+  const scoreMaxMin = {}
+  const theBest = []
+  const theBad = []
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].score > scoreMax) {
+      scoreMax = array[i].score
     }
-    if(students[i].score < scoreMin){
-      scoreMin = students[i].score
-    }
-  }
-  for(let i = 0 ; i < students.length ; i++ ) {
-    if(students[i].score == scoreMax) {
-      theBest.push(students[i])
-    }
-    if(students[i].score == scoreMin){
-      theBad.push(students[i])
+    if (array[i].score < scoreMin){
+      scoreMin = array[i].score
     }
   }
-  console.log(theBest);
-  console.log(theBad);
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].score === scoreMax) {
+      theBest.push(array[i])
+    }
+    if (array[i].score === scoreMin) {
+      theBad.push(array[i])
+    }
+  }
+  scoreMaxMin.theBest = theBest
+  scoreMaxMin.theBad = theBad
+  console.log(scoreMaxMin);
 }
+// e viết 2 vòng for vì muốn làm trường hợp có nhiều người cùng có điểm lớn nhất và nhỏ nhất 
