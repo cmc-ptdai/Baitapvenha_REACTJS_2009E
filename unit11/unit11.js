@@ -1,49 +1,49 @@
 // Exercise : 1 
 // method 1
 const repeatCharMethodOne = (char, number) => {
-	const arrayChar = []	
-	for (let i = 1; i <= number; i++) {
-		arrayChar.push(char)
-	}
-	return arrayChar
+  const arrayChar = []
+  for (let i = 0; i < number; i++) {
+    arrayChar.push(char)
+  }
+  return arrayChar
 }
 // method 2 
 const repeatCharMethodTwo = (char, number) => {
-	const arrayChar = []
-	let i = 0
-	while (i < number) {
-		arrayChar.push(char)
-		i++
-	}
-	return arrayChar
+  const arrayChar = []
+  let i
+  while (i < number) {
+    arrayChar.push(char)
+    i++
+  }
+  return arrayChar
 }
 
 // Exercise 2 
 const getReverseArray = (array = []) => {
-	const reverseArray = []
-	for (let i = array.length - 1; i >= 0; i--) {
-		reverseArray.push(array[i])
-	}
-	return reverseArray
+  const reverseArray = []
+  for (let i = array.length - 1; i >= 0; i--) {
+    reverseArray.push(array[i])
+  }
+  return reverseArray
 }
 
 // Exercise 3 
 const deleteFalseValue = (array = []) => {
-	const trueValue = []
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] === 0) continue
-		if (typeof(array[i]) === 'number') {
-			trueValue.push(array[i])
-		}
-	}
-	return trueValue
+  const truValue = []
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 0) continue
+    if (typeof(array[i]) === 'number') {
+      truValue.push(array[i])
+    }
+  }
+  return truValue
 }
 
 // Exercise 4 
 const createObject = (array = []) => {
-	const newObject = {}
-	array.forEach(item => {
-		newObject[item[0]] = item[1]
+  const newObject = {}
+  array.forEach(item => {
+    newObject[item[0]] = item[1]
   })
   return newObject
 }
