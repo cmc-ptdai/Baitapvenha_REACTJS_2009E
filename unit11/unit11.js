@@ -108,14 +108,14 @@ const getStudentPass = (array = []) => {
 const getStudentByScore = (students = []) => {
   const studentScore = []
   students.forEach(student => {
-		let decimal = (student.score - parseInt(student.score)) * 10
-		let scoreNumber = parseInt(student.score) + Number(decimal.toFixed(2))
-		if (scoreNumber >= 10) {
-			scoreNumber = scoreNumber - 10
-		}
-		if (scoreNumber > 5) {
-			studentScore.push(student)
-		}
+    let decimal = (student.score - parseInt(student.score)) * 10
+    let scoreNumber = parseInt(student.score) + Number(decimal.toFixed(2))
+    if (scoreNumber >= 10) {
+      scoreNumber = scoreNumber - 10
+    }
+    if (scoreNumber > 5) {
+      studentScore.push(student)
+    }
   })
   return studentScore
 }
