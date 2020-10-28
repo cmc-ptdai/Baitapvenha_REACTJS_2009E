@@ -10,7 +10,7 @@ const repeatCharMethodOne = (char, number) => {
 // method 2 
 const repeatCharMethodTwo = (char, number) => {
   const arrayChar = []
-  let i
+  let i = 0 
   while (i < number) {
     arrayChar.push(char)
     i++
