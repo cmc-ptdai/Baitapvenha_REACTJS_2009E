@@ -1,14 +1,14 @@
 // Exercise : 1 
-// method 1
-const repeatCharMethodOne = (char, number) => {
+// Method 1
+const repeatMethodOne = (char, number) => {
   const arrayChar = []
   for (let i = 0; i < number; i++) {
     arrayChar.push(char)
   }
   return arrayChar
 }
-// method 2 
-const repeatCharMethodTwo = (char, number) => {
+// Method 2 
+const repeatMethodTwo = (char, number) => {
   const arrayChar = []
   let i = 0 
   while (i < number) {
@@ -28,16 +28,7 @@ const getReverseArray = (array = []) => {
 }
 
 // Exercise 3 
-const deleteFalseValue = (array = []) => {
-  const truValue = []
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === 0) continue
-    if (typeof(array[i]) === 'number') {
-      truValue.push(array[i])
-    }
-  }
-  return truValue
-}
+const deleteFalseValue = (array = []) => array.filter(item => item)
 
 // Exercise 4 
 const createObject = (array = []) => {
@@ -62,32 +53,31 @@ const sortNumber = (array = []) => {
   }
   return array
 }
+//const arr = [1, 2, 3, 5, 'em có đánh rơi nhịp nào không'] vẫn trả ra như hàm sort anh
 
 // Exercise 6 
-const checkObject = a => {
-  if (typeof(a) !== 'object') return false
-  if (Array.isArray(a) === true) {
-    return false
-  } else {
-    return true
-  }
+const checkIsObject = object => {
+  if (object === null) return false
+  return typeof(object) === 'object' && !Array.isArray(object)
 }
 
 // Exercise 7
 const deleteObjectByKey = (object = {}, array = []) => {
+  const newObject = {}
   for (let key in object) {
     array.forEach(i => {
       if (key === i) {
-        delete(object[key])
+        newObject[key] = object[key]
       }
     })
   }
-  return object
+  return newObject
 }
+
 // Exercise 8 
 const deleteItemInArray = (array = []) => {
   if (array.length < 5) return
-  array.splice(1,2)
+  array.splice(2, 3)
   return array
 }
 
@@ -95,6 +85,7 @@ const deleteItemInArray = (array = []) => {
 const getStudentPass = (array = []) => {
   const studentPass = []
   array.forEach(student => {
+    if (student.name === 'Duy') return studentPass.push('Fail')
     if (student.score < 5.0 || (student.name.indexOf('Duy') >= 3 && student.name.indexOf('Duy') <= 7)) {
       studentPass.push('Fail')
     } else {
@@ -116,6 +107,13 @@ const getStudentByScore = (students = []) => {
     if (scoreNumber > 5) {
       studentScore.push(student)
     }
+    // let number = String(student.score)
+    // const arrayString = number.split('.')
+    // const sumString = arrayString[0] + arrayString[1]
+    // const scoreNumber = sumString.substr(-1)
+    // if (scoreNumber > 5) {
+    //   studentScore.push(student)
+    // }
   })
   return studentScore
 }
