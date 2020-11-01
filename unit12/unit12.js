@@ -66,11 +66,11 @@ const compareDate = date => {
 // Exercise 6 
 // Check email
 const checkEmail = string => {
-  const reg = /^[A-Za-z0-9_.]{2,30}@[a-z]{2,12}(\.[a-z]{2,12})*$/
+  const reg = /^[A-Za-z0-9](\w[\._]?){3,30}@[a-z]{2,12}(\.[a-z]{2,12})+$/
   return reg.test(string)
 }
 // Check UserName
 const CheckUserName = string => {
-  const reg = /^[a-z_][a-z0-9_]{1,9}$/
-  return string.indexOf('__') === -1 ? reg.test(string) : false
+  const reg = /^[a-z_]([a-z0-9][\._-]?){1,9}$/
+  return reg.test(string)
 }
