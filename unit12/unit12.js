@@ -1,15 +1,15 @@
 // Exercise 1 
-const compareArray = (array1 = [], array2 = []) => 	JSON.stringify(array2) === JSON.stringify(array1)
+const compareArray = (array1 = [], array2 = []) => JSON.stringify(array2) === JSON.stringify(array1)
 
 // Exercise 2 
 const takeFlatArray = (array = []) => {
-	const flatArray = array.flat(Infinity)
-	return flatArray
+  const flatArray = array.flat(Infinity)
+  return flatArray
 }
 
 // Exercise 3 
 const divisionArray = (array = [], number) => {
-	const newArray = []
+  const newArray = []
   for (let i = 0; i < array.length; i = i + number) {
     newArray.push(array.slice(i, i + number))
   }
@@ -71,6 +71,6 @@ const checkEmail = string => {
 }
 // Check UserName
 const CheckUserName = string => {
-	const reg = /^[a-z_][a-z0-9_]{1,9}$/
-	return string.indexOf('__') === -1 ? reg.test(string) : false
+  const reg = /^[a-z_][a-z0-9_]{1,9}$/
+  return string.indexOf('__') === -1 ? reg.test(string) : false
 }
