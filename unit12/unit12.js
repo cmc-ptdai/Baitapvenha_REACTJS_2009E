@@ -18,8 +18,8 @@ const divisionArray = (array = [], number) => {
 
 // Exercise 4
 const compareEleArray = function() {
-	const arraySearch = []
-	arguments[0].forEach(i => {
+  const arraySearch = []
+  arguments[0].forEach(i => {
     arguments[1].forEach(j => {
       if (i === j) {
         arraySearch.push(i)
@@ -42,19 +42,19 @@ const compareEleArray = function() {
   return arraySearch.filter((item, index) => {
     return arraySearch.indexOf(item) === index
   })
-	// if (arguments.length < 3) return _.intersection(arguments[0],arguments[1])
+  // if (arguments.length < 3) return _.intersection(arguments[0],arguments[1])
   // arguments[0].forEach(ele => {
   //   arguments[1].forEach(elem => {
   //     if (ele === elem) {
   //       arraySearch.push(ele)
   //     }
   //   })
-	// })
-	// const result = []
-	// for (let i = 2; i < arguments.length; i++) {
-	// 	result.push(_.intersection(arraySearch,arguments[i]))
-	// }
-	// return result
+  // })
+  // const result = []
+  // for (let i = 2; i < arguments.length; i++) {
+  //   result.push(_.intersection(arraySearch,arguments[i]))
+  // }
+  // return result
 }
 
 // Exercise 5
