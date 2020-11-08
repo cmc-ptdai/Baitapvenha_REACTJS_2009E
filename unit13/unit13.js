@@ -23,26 +23,23 @@ const electronics = () => {
           <li>Dell</li>
           <li>Lenovo</li>
           <li>Asus</li>
-        </ul>
-			`
-			break
-		case 'Phone' :
+        </ul>`
+      break
+    case 'Phone' :
       document.getElementById('listElectronic').innerHTML = `
         <ul>
           <li>Apple</li>
           <li>Samsung</li>
           <li>Nokia</li>
-        </ul>
-			`
-			break
-		case 'Tivi' :
+        </ul>`
+      break
+    case 'Tivi' :
       document.getElementById('listElectronic').innerHTML = `
         <ul>
           <li>LG</li>
           <li>Sony</li>
-        </ul>
-			`
-			break
+        </ul>`
+      break
     default :
       document.getElementById('listElectronic').innerHTML = ``
   }
