@@ -13,7 +13,7 @@ const changeColor = e => {
 }
 
 // Exercise 3
-const electronics = () => {
+const showElectronics = () => {
   const typeElectronic = document.getElementById('electronics').value
   switch(typeElectronic) {
     case 'Laptop' :
