@@ -1,0 +1,14 @@
+li {
+    list-style: none;
+    width: 100px;
+    height: 50px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 5px;
+}
+.divEx2 {
+    width: 100px;
+    height: 100px;
+    background-color: red
+}
