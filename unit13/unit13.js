@@ -27,20 +27,20 @@ const electronics = () => {
       `
 			break
 		case 'Phone' :
-			document.getElementById('listElectronic').innerHTML = `
-				<ul>
-					<li>Apple</li>
-					<li>Samsung</li>
-					<li>Nokia</li>
-				</ul>
+      document.getElementById('listElectronic').innerHTML = `
+        <ul>
+          <li>Apple</li>
+          <li>Samsung</li>
+          <li>Nokia</li>
+        </ul>
 			`
 			break
 		case 'Tivi' :
-			document.getElementById('listElectronic').innerHTML = `
-				<ul>
-					<li>LG</li>
-					<li>Sony</li>
-				</ul>
+      document.getElementById('listElectronic').innerHTML = `
+        <ul>
+          <li>LG</li>
+          <li>Sony</li>
+        </ul>
 			`
 			break
 		default :
