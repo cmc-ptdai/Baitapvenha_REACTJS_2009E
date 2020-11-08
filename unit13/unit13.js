@@ -25,8 +25,8 @@ const electronics = () => {
           <li>Asus</li>
         </ul>
       `
-      break
-    case 'Laptop' :
+			break
+		case 'Phone' :
 			document.getElementById('listElectronic').innerHTML = `
 				<ul>
 					<li>Apple</li>
@@ -34,7 +34,8 @@ const electronics = () => {
 					<li>Nokia</li>
 				</ul>
 			`
-		case 'Tivi' : 
+			break
+		case 'Tivi' :
 			document.getElementById('listElectronic').innerHTML = `
 				<ul>
 					<li>LG</li>
@@ -42,8 +43,8 @@ const electronics = () => {
 				</ul>
 			`
 			break
-		default : 
-		document.getElementById('listElectronic').innerHTML = ``
+		default :
+			document.getElementById('listElectronic').innerHTML = ``
   }
 }
 // Exercise 4 
