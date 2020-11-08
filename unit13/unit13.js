@@ -24,7 +24,7 @@ const electronics = () => {
           <li>Lenovo</li>
           <li>Asus</li>
         </ul>
-      `
+			`
 			break
 		case 'Phone' :
       document.getElementById('listElectronic').innerHTML = `
@@ -43,16 +43,16 @@ const electronics = () => {
         </ul>
 			`
 			break
-		default :
-			document.getElementById('listElectronic').innerHTML = ``
+    default :
+      document.getElementById('listElectronic').innerHTML = ``
   }
 }
 // Exercise 4 
 function createMenu (menu = []) {
-	menu.forEach(item => {
-		console.log(item.name)
-		if (item.children) {
-			createMenu(item.children)
-		}
-	})
+  menu.forEach(item => {
+    console.log(item.name)
+    if (item.children) {
+      createMenu(item.children)
+    }
+  })
 }
