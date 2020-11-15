@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    background-color: #eeeeee;
+}
+li {
+    list-style:  none;
+    width: 200px;
+    z-index: 2;
+}
+a {
+    text-decoration: none;
+    color: #777777;
+}
+a:hover {
+    color: #d8823b;
+}
+#parent {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+/* Search */
+.search {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 60px;
+}
+.search input {
+    position: absolute;
+    border: 1px solid #eeeeee;
+    width: 80%;
+    height: 30px;
+    padding: 15px 7px;
+    top: 12px;
+    left: 12px;
+}
+.search button {
+    position: absolute;
+    border: none;
+    height: 32px;
+    width: 33px;
+    top: 12px;
+    right: 29px;
+    color: #ffffff;
+    background-color: #d8823b;
+}
+/* Menu parent */
+#parent > li > a {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 60px;
+    background-color: #fff;
+    padding: 10px;
+}
+#parent > li > a:first-child i {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+#parent > li > a:last-child b{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#parent > li ul {
+    position: absolute;
+    margin-left: 200px;
+    top: 0;
+}
+/* Menu child */
+#parent > li > ul a {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+}
+#parent > li > ul li a:first-child .icon {
+    margin-right: 5px;
+    font-size: 20px;
+    width: 34px;
+    text-align: center;
+}
+#parent > li ul li a:last-child b {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Active */
+.active {
+    position: relative;
+    z-index: 10;
+    box-shadow: 1px 1px 5px 0px #666;
+    -moz-box-shadow: 1px 1px 5px 0px #666;
+    -webkit-box-shadow: 1px 1px 1px 5px 0px #666;
+}
+.active_right,
+#parent > li > ul li {
+    position: relative;
+}
+#parent > li:not(:last-child) {
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+}
+#parent > .active::before,
+#parent > .active::after,
+.active_right::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid transparent;
+}
+#parent > .active::before {
+    left: 0;
+    border-left: 6px solid #d8823b;
+}
+#parent > .active::after,
+.active_right::before {
+    right: 0;
+    border-right: 6px solid #d8823b;
+}
+#parent > .active a::before,
+#parent > .active a::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #d8823b;
+}
+#parent > li > ul li a::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    z-index: 10;
+    width: 6px;
+    height: 100%;
+    background-color: #d8823b;
+}
+#parent > .active a::before {
+    left: 100%;
+}
+#parent > .active a::after {
+    right: 100%;
+}
+#parent > li > ul li a::after {
+    right: 97%;
+}
+.active > a {
+    color: #d8823b;
+}
+#parent > li ul {
+    display: none;
+}
+#parent > li a:hover + ul {
+    display: block;
+}
+#parent > li > ul li a {
+    border-bottom: 1px solid #eeeeee;
+}
