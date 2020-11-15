@@ -84,9 +84,7 @@ const deepMenu = [
     icon: 'far fa-envelope',
   },
 ]
-const showItem = (event) => {
-  const item = event.target
-}
+const showItem = (event) => {}
 window.onload = () => {  
   const createMenu = (parent, menu) => {
     menu.forEach(child => {
