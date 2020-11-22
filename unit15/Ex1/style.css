@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+}
+.formAdd {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+.formAdd .button {
+    position: absolute;
+    top: 100%;
+    right: -350px;
+}
+.formShow {
+    margin-top: 50px;
+    width: 1000px;
+    height: auto;
+}
+table tr td,
+table tr th {
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+table .btn {
+    display: inline-flex;
+}
+table .btn button {
+    margin-right: 10px;
+} 
+table tr td input,
+table tr td select {
+    margin-top: 9px;
+}
