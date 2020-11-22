@@ -55,14 +55,13 @@ const editItem = (event, id) => {
   const tdAge = tr.querySelector('td:nth-child(5)')
   students.forEach(item => {
     if (item.id === id) {
-      tdName.innerHTML = ` <input type="text" class="form-control" id="editName${item.id}" value="${item.name}">`
+      tdName.innerHTML = `<input type="text" class="form-control" id="editName${item.id}" value="${item.name}">`
       tdGender.innerHTML = `
         <select class="form-control" id="editGender${item.id}" value="${item.gender}">
           <option>Nam</option>
           <option>Nữ</option>
-          </select>
-      `
-      tdAge.innerHTML = ` <input type="number" class="form-control" id="editAge${item.id}" value="${item.age}">`
+        </select>`
+      tdAge.innerHTML = `<input type="number" class="form-control" id="editAge${item.id}" value="${item.age}">`
     }
   })
 }

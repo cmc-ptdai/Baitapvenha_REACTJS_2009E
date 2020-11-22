@@ -103,7 +103,7 @@ body {
 .profile_pokemon .hp span:nth-child(2)::after,
 .profile_pokemon .atk span:nth-child(2)::after {
     position: absolute;
-    content: '';
+    content: "";
     height: 20px;
     width: 200px;
     left: 0;

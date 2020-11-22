@@ -24,8 +24,7 @@ window.onload = () => {
       html += `
       <div class="col-3 item" id="pokemon${item.id}" onclick="showProfile(${item.id})">
         <img src="${item.img}" alt="${item.name}">
-      </div>
-      `
+      </div>`
     })
     list_pokemon.innerHTML = html
   }
@@ -34,7 +33,7 @@ window.onload = () => {
 }
 const renderSelect = () => {
   const selectPokemon = document.querySelector('.content .select_pokemon')
-  let html = ` 
+  let html = `
     <div id="title_select"><span>${title}</span><span  ondblclick="editTitle()"> (Double click to edit)</span></div>
     <div class="group_pokemon">`
   for (let i = 0; i < 5; i++) {
@@ -45,12 +44,9 @@ const renderSelect = () => {
               <button type="button" onclick="deletePokemonSelect(${pokemonSelect[i].id})"><i class="fas fa-times"></i></button>
               <img src="${pokemonSelect[i].img}" alt="${pokemonSelect[i].name}">
           </div>
-        </div>
-      `
+        </div>`
     } else {
-      html += `
-        <div class="item"></div>
-      `
+      html += `<div class="item"></div>`
     }
   }
   html += `</div>` 
@@ -70,15 +66,14 @@ const showProfile = id => {
   pokemons.forEach(item => {
     if (item.id === id) {
       profile_pokemon.innerHTML = `
-      <div>
-          <img id="avatar" src="${item.img}" alt="${item.name}">
-      </div>
-      <span>${item.name}</span>
-      <div class="hp">HP <span>${item.hp}</span> <span></span></div><br>
-      <div class="atk">ATK <span>${item.atk}</span> <span></span></div><br>
-      <button id="add${item.id}" onclick="addPokemon(${item.id})"> ADD</button>
-      <span id="error">You have select 5 pokemons.</span>
-      `
+        <div>
+            <img id="avatar" src="${item.img}" alt="${item.name}">
+        </div>
+        <span>${item.name}</span>
+        <div class="hp">HP <span>${item.hp}</span> <span></span></div><br>
+        <div class="atk">ATK <span>${item.atk}</span> <span></span></div><br>
+        <button id="add${item.id}" onclick="addPokemon(${item.id})"> ADD</button>
+        <span id="error">You have select 5 pokemons.</span>`
       const hp = document.querySelector('.profile_pokemon .hp span:nth-child(2)')
       hp.style.width = item.hp + 'px'
       const atk = document.querySelector('.profile_pokemon .atk span:nth-child(2)')
@@ -135,8 +130,7 @@ const editTitle = () => {
     <input type="text" id="editTitle" 
       value="${text[0].innerText}"
       onkeypress="return addTitle(event)"
-    >
-  `
+    >`
 }
 const addTitle = event => {
   if (event.keyCode === 13) {

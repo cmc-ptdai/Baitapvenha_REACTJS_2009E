@@ -8,7 +8,7 @@ body {
     background-color: #eeeeee;
 }
 li {
-    list-style:  none;
+    list-style: none;
     width: 200px;
 }
 a {
@@ -62,7 +62,7 @@ a {
     margin-right: 10px;
     font-size: 25px;
 }
-#parent > li > a:last-child b{
+#parent > li > a:last-child b {
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -90,7 +90,6 @@ a {
     font-size: 14px;
     text-transform: uppercase;
 }
-
 /* Active */
 .active {
     position: relative;
