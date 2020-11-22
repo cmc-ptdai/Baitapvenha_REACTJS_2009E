@@ -162,7 +162,7 @@ a {
 #parent li > ul {
     display: none;
 }
-#parent li:hover > ul{
+#parent li:hover > ul {
     display: block;
 }
 li:hover > a {
